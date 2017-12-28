@@ -1,0 +1,6 @@
+C:\workspaces\at_academy\at_academy\at_academy\obj\Debug\at_academy.csprojResolveAssemblyReference.cache
+C:\workspaces\at_academy\at_academy\at_academy\bin\Debug\at_academy.exe.config
+C:\workspaces\at_academy\at_academy\at_academy\bin\Debug\at_academy.exe
+C:\workspaces\at_academy\at_academy\at_academy\bin\Debug\at_academy.pdb
+C:\workspaces\at_academy\at_academy\at_academy\obj\Debug\at_academy.exe
+C:\workspaces\at_academy\at_academy\at_academy\obj\Debug\at_academy.pdb
