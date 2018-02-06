@@ -29,7 +29,9 @@ namespace at_academy
                 aircraft.LoadPassengers(15);
                 aircraft.TakeOff();
                 aircraft.Fly(1.5f);
-                aircraft.PrintInfo<string>();
+                aircraft.PrintInfo<string>(aircraft.Name);
+                aircraft.PrintInfo<int>(aircraft.MaxPassengersCapacity);
+                aircraft.PrintInfo<double>(aircraft.MaxDistance);
                 Console.WriteLine();
             }
 
@@ -39,7 +41,22 @@ namespace at_academy
             Utils.PrintExistingAircrafts(sorted_aircrafts);            
             Utils.PrintExistingAircrafts(aircrafts);
             Utils.Search(aircrafts, "A new hope");
+
+            try
+            {
+                Utils.Search(aircrafts, "Run forest!");
+            }
+            catch ( System.EntryPointNotFoundException e)
+            {
+                System.Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                System.Console.WriteLine("Search is completed!");
+            }
+
             
+
 
 
             var numbers = new Generics.GenericList<int>();

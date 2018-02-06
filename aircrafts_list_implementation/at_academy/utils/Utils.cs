@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 
+
 namespace at_academy.utils
 {
     public class Utils
@@ -58,8 +59,10 @@ namespace at_academy.utils
 
         public static void Search(List<BaseAircraft> list, string searchName)
         {
+            int k = 0;            
+               
             foreach (BaseAircraft elem in list)
-            {
+            {                    
                 if (elem.Name == searchName)
                 {
                     Console.WriteLine();
@@ -74,9 +77,22 @@ namespace at_academy.utils
                     Console.WriteLine("Maximum flight distance is " + elem.MaxDistance);
                     Console.WriteLine("Maximum cargo capacity is " + elem.MaxCargoCapacity);
                     Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-                }
+                } 
+                else
+                {
+                    k++;
+                }                                 
+            }
+
+            if (k == list.Count)
+            {
+                throw new System.EntryPointNotFoundException();
             }
         }
+
+            
+
+        
 
 
         public static void PrintExistingAircrafts(List<BaseAircraft> list)

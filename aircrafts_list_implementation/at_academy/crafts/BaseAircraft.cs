@@ -13,7 +13,7 @@ namespace at_academy.crafts
         public double MaxDistance { get; set; } // max flight distance of an aircraft ( km )
         public float FuelCapacity { get; set; } // ( liters )
 
-        public double Price { get; set; }
+        public double Price { get; set; }        
 
         public BaseAircraft(string _name)
         {
@@ -22,9 +22,9 @@ namespace at_academy.crafts
 
         public abstract void IsCreated();
 
-        public void PrintInfo<T>()
+        public void PrintInfo<T>(T value)
         {
-            Console.WriteLine("This is a value of type {0}", typeof(T));
+            Console.WriteLine("The value '{0}' is of type {1}", value, typeof(T).Name);
         }
 
 

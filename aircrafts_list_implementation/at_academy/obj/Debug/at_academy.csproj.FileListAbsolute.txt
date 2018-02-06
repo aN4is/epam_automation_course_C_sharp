@@ -16,3 +16,9 @@ c:\workspaces\at_academy\aircrafts\at_academy\obj\Debug\at_academy.pdb
 c:\workspaces\at_academy\aircrafts\at_academy\bin\Debug\at_academy.exe.config
 c:\workspaces\at_academy\aircrafts\at_academy\bin\Debug\at_academy.exe
 c:\workspaces\at_academy\aircrafts\at_academy\bin\Debug\at_academy.pdb
+c:\workspaces\at_academy\aircrafts_list_implementation\at_academy\bin\Debug\at_academy.exe.config
+c:\workspaces\at_academy\aircrafts_list_implementation\at_academy\bin\Debug\at_academy.exe
+c:\workspaces\at_academy\aircrafts_list_implementation\at_academy\bin\Debug\at_academy.pdb
+c:\workspaces\at_academy\aircrafts_list_implementation\at_academy\obj\Debug\at_academy.csprojResolveAssemblyReference.cache
+c:\workspaces\at_academy\aircrafts_list_implementation\at_academy\obj\Debug\at_academy.exe
+c:\workspaces\at_academy\aircrafts_list_implementation\at_academy\obj\Debug\at_academy.pdb
