@@ -38,13 +38,13 @@
     <Compile Include="crafts\Airplane.cs" />
     <Compile Include="crafts\Balloon.cs" />
     <Compile Include="crafts\BaseAircraft.cs" />
-    <Compile Include="generics\DiscountCalculator.cs" />
     <Compile Include="generics\Generics.cs" />
     <Compile Include="crafts\Helicopter.cs" />
     <Compile Include="crafts\Quadcopter.cs" />
     <Compile Include="crafts\Spaceship.cs" />
     <Compile Include="generics\Utilities.cs" />
     <Compile Include="interfaces\IRechargeable.cs" />
+    <Compile Include="singleton\SecretShip.cs" />
     <Compile Include="TravelLight.cs" />
     <Compile Include="utils\Utils.cs" />
   </ItemGroup>

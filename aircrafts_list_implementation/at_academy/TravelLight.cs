@@ -1,5 +1,6 @@
 ﻿using at_academy.crafts;
 using at_academy.utils;
+using at_academy.singleton;
 using System;
 using System.Collections.Generic;
 
@@ -31,7 +32,7 @@ namespace at_academy
                 aircraft.Fly(1.5f);
                 aircraft.PrintInfo<string>(aircraft.Name);
                 aircraft.PrintInfo<int>(aircraft.MaxPassengersCapacity);
-                aircraft.PrintInfo<double>(aircraft.MaxDistance);
+                aircraft.PrintInfo<double>(aircraft.MaxDistance);                
                 Console.WriteLine();
             }
 
@@ -55,8 +56,17 @@ namespace at_academy
                 System.Console.WriteLine("Search is completed!");
             }
 
-            
 
+            BaseAircraft surprise = SecretShip.Instance;
+            surprise.IsCreated();
+            System.Console.WriteLine("Instance ID: {0}", surprise.GetHashCode());
+
+            BaseAircraft surprise2 = SecretShip.Instance;
+            surprise2.IsCreated();
+            System.Console.WriteLine("Instance ID: {0}", surprise2.GetHashCode());
+
+
+            //generics training--------------------------------------------------
 
 
             var numbers = new Generics.GenericList<int>();
@@ -64,15 +74,17 @@ namespace at_academy
             numbers.Add(10);
 
             var planes = new Generics.GenericList<Airplane>();
-            planes.Add(new Airplane("Herpa Etihad Airbus A600"));
+            planes.Add(new Airplane("Herpa Etihad Airbus A600"));            
 
             var quadcopters = new Generics.GenericList<Quadcopter>();
             quadcopters.Add(new Quadcopter("LF-60"));
 
             var dictionary = new Generics.GenericDictionary<string, Helicopter>();
             dictionary.Add("1234", new Helicopter("Shark-12"));
-            
 
+            //---------------------------------------------------------------------
+
+            
 
             Console.ReadLine();
         } 
