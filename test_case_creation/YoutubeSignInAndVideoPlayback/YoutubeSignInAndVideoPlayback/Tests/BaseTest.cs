@@ -1,7 +1,4 @@
 ﻿using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using System;
 using YoutubeSignInAndVideoPlayback.WebDriver;
 
 namespace YoutubeSignInAndVideoPlayback.tests
@@ -14,7 +11,7 @@ namespace YoutubeSignInAndVideoPlayback.tests
         public void Initialize()
         {
             Driver.GetDriver();
-            Driver.GetDriver().Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(TimeoutSec);
+            //Driver.GetDriver().Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(TimeoutSec);
         }
 
         [TearDown]
