@@ -8,10 +8,8 @@ namespace YoutubeSignInAndVideoPlayback.pages.PageObjectPattern.steps
         StartPage startPage = new StartPage(Driver.GetDriver());
 
         public void OpenSignInPage()
-        {
-            
-            startPage.ClickSignInButton();
-            //return new SignInPage(Driver);
+        {            
+            startPage.ClickSignInButton();           
         }
 
         public void OpenYoutubeUrl()

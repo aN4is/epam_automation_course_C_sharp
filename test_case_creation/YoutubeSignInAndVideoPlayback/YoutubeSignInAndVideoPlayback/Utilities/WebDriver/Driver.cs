@@ -15,7 +15,8 @@ namespace YoutubeSignInAndVideoPlayback.WebDriver
                 ChromeOptions options = new ChromeOptions();
                 options.AddArgument("--start-maximized");
                 instance = new ChromeDriver(options);
-            }           
+            }
+            instance.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
             return instance;
         }
 

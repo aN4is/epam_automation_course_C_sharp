@@ -14,6 +14,7 @@ namespace YoutubeSignInAndVideoPlayback.pages.PageObjectPattern
         WebDriverWait wait;
 
 
+
         public SignInPage(IWebDriver driver) : base(driver)
         {            
         }
@@ -40,6 +41,8 @@ namespace YoutubeSignInAndVideoPlayback.pages.PageObjectPattern
 
         public void EnterUsername(string username)
         {
+            WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
+            wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("div > input[type='email']")));
             EmailInput.SendKeys(username);
         }
         public void ClickNextButton()
@@ -49,8 +52,10 @@ namespace YoutubeSignInAndVideoPlayback.pages.PageObjectPattern
             NextButton.Click();
         }
 
-        public void EnterPassowrd(string password)
+        public void EnterPassword(string password)
         {
+            WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
+            wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("div > input[type='password']")));
             PasswordInput.SendKeys(password);
         }
         public void ClickDoneButton()

@@ -26,12 +26,16 @@ namespace YoutubeSignInAndVideoPlayback.pages.PageObjectPattern
 
         public void SearchForRequiredVideo(string search_string)
         {
+            WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
+            wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("#search")));
             SearchField.SendKeys(search_string);
             SearchField.SendKeys(Keys.Enter);
         }
 
         public void ClickFirstVideoInGrid()
         {
+            WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(".//ytd-video-renderer[1]")));
             FirstVideoInGrid.Click();
         }
     }

@@ -10,7 +10,7 @@ namespace YoutubeSignInAndVideoPlayback.pages.PageObjectPattern.steps
         {
             signInPage.EnterUsername(username);
             signInPage.ClickNextButton();
-            signInPage.EnterPassowrd(password);
+            signInPage.EnterPassword(password);
             signInPage.ClickDoneButton();
         }
     }
