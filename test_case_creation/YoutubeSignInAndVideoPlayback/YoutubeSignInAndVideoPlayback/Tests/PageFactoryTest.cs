@@ -3,7 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
 using System.Threading;
-using YoutubeSignInAndVideoPlayback.pages.PageFacotryPattern;
+using YoutubeSignInAndVideoPlayback.pages.PageFactoryPattern;
 
 namespace YoutubeSignInAndVideoPlayback.tests
 {
@@ -18,7 +18,9 @@ namespace YoutubeSignInAndVideoPlayback.tests
         [SetUp]
         public void Initialize()
         {
-            driver = new ChromeDriver();
+            ChromeOptions options = new ChromeOptions();
+            options.AddArgument("--start-maximized");
+            driver = new ChromeDriver(options);
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
         }
 

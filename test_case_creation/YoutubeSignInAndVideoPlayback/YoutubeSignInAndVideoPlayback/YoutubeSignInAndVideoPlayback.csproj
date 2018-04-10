@@ -59,27 +59,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PageFactoryPattern\Pages\FirstVideoPage.cs" />
-    <Compile Include="PageFactoryPattern\Pages\HomePage.cs" />
-    <Compile Include="PageFactoryPattern\Pages\SignInPage.cs" />
-    <Compile Include="PageFactoryPattern\Pages\StartPage.cs" />
-    <Compile Include="PageObjectPattern\Pages\HomePage.cs" />
-    <Compile Include="PageObjectPattern\Pages\FirstVideoPage.cs" />
-    <Compile Include="PageObjectPattern\Pages\SignInPage.cs" />
-    <Compile Include="PageObjectPattern\Pages\StartPage.cs" />
+    <Compile Include="Patterns\PageFactoryPattern\FirstVideoPage.cs" />
+    <Compile Include="Patterns\PageFactoryPattern\HomePage.cs" />
+    <Compile Include="Patterns\PageFactoryPattern\SignInPage.cs" />
+    <Compile Include="Patterns\PageFactoryPattern\StartPage.cs" />
+    <Compile Include="Patterns\PageObjectPattern\pages\BasePage.cs" />
+    <Compile Include="Patterns\PageObjectPattern\pages\HomePage.cs" />
+    <Compile Include="Patterns\PageObjectPattern\pages\FirstVideoPage.cs" />
+    <Compile Include="Patterns\PageObjectPattern\pages\SignInPage.cs" />
+    <Compile Include="Patterns\PageObjectPattern\pages\StartPage.cs" />
+    <Compile Include="Patterns\PageObjectPattern\steps\BasePageSteps.cs" />
+    <Compile Include="Patterns\PageObjectPattern\steps\FirstVideoPageSteps.cs" />
+    <Compile Include="Patterns\PageObjectPattern\steps\HomePageSteps.cs" />
+    <Compile Include="Patterns\PageObjectPattern\steps\SignInPageSteps.cs" />
+    <Compile Include="Patterns\PageObjectPattern\steps\StartPageSteps.cs" />
+    <Compile Include="Tests\BaseTest.cs" />
     <Compile Include="Tests\PageFactoryTest.cs" />
     <Compile Include="Tests\PageObjectTest.cs" />
     <Compile Include="Tests\SimpleTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utilities\Driver.cs" />
+    <Compile Include="Utilities\WebDriver\Driver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="PageFactoryPattern\Steps\" />
-    <Folder Include="PageObjectPattern\Steps\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
