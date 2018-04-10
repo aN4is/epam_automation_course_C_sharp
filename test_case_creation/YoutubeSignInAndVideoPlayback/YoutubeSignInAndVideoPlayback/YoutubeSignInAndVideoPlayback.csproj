@@ -59,23 +59,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="pages\PageFacotryPattern\FirstVideoPage.cs" />
-    <Compile Include="pages\PageFacotryPattern\HomePage.cs" />
-    <Compile Include="pages\PageFacotryPattern\SignInPage.cs" />
-    <Compile Include="pages\PageFacotryPattern\StartPage.cs" />
-    <Compile Include="pages\PageObjectPattern\HomePage.cs" />
-    <Compile Include="pages\PageObjectPattern\FirstVideoPage.cs" />
-    <Compile Include="pages\PageObjectPattern\SignInPage.cs" />
-    <Compile Include="pages\PageObjectPattern\StartPage.cs" />
-    <Compile Include="tests\PageFactoryTest.cs" />
-    <Compile Include="tests\PageObjectTest.cs" />
-    <Compile Include="tests\SimpleTest.cs" />
+    <Compile Include="PageFactoryPattern\Pages\FirstVideoPage.cs" />
+    <Compile Include="PageFactoryPattern\Pages\HomePage.cs" />
+    <Compile Include="PageFactoryPattern\Pages\SignInPage.cs" />
+    <Compile Include="PageFactoryPattern\Pages\StartPage.cs" />
+    <Compile Include="PageObjectPattern\Pages\HomePage.cs" />
+    <Compile Include="PageObjectPattern\Pages\FirstVideoPage.cs" />
+    <Compile Include="PageObjectPattern\Pages\SignInPage.cs" />
+    <Compile Include="PageObjectPattern\Pages\StartPage.cs" />
+    <Compile Include="Tests\PageFactoryTest.cs" />
+    <Compile Include="Tests\PageObjectTest.cs" />
+    <Compile Include="Tests\SimpleTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\Driver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="PageFactoryPattern\Steps\" />
+    <Folder Include="PageObjectPattern\Steps\" />
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
