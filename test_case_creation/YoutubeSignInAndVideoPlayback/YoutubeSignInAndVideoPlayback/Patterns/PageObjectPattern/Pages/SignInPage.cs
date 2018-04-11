@@ -12,10 +12,6 @@ namespace YoutubeSignInAndVideoPlayback.pages.PageObjectPattern
         private string PasswordInputCssLocator = "div > input[type='password']";
         private string ButtonDoneCssLocator = "div#passwordNext > content > span";
 
-        WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(5));
-
-
-
         //public SignInPage(IWebDriver driver) : base(driver)
         //{            
         //}

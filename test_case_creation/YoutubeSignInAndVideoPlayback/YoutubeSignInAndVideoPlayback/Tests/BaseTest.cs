@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using System;
 using YoutubeSignInAndVideoPlayback.WebDriver;
 
 namespace YoutubeSignInAndVideoPlayback.tests
@@ -11,13 +12,13 @@ namespace YoutubeSignInAndVideoPlayback.tests
         public void Initialize()
         {
             Driver.GetDriver();
-            //Driver.GetDriver().Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(TimeoutSec);
+            Driver.GetDriver().Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(TimeoutSec);
         }
 
         [TearDown]
         public void EndTest()
         {
-            Driver.Quit();
+            Driver.Quit();            
         }
     }
 }

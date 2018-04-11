@@ -12,9 +12,7 @@ namespace YoutubeSignInAndVideoPlayback.pages.PageObjectPattern
        
         //public HomePage(IWebDriver driver) : base(driver)
         //{
-        //}
-
-        WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(5));
+        //}       
 
         public IWebElement SearchField
         {
