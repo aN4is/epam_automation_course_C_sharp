@@ -1,24 +1,21 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using YoutubeSignInAndVideoPlayback.WebDriver;
 
 namespace YoutubeSignInAndVideoPlayback.pages.PageObjectPattern
 {
     class FirstVideoPage : BasePage
     {
-        private string ButtonAvatarCssLocator = "button#avatar-btn";
-        private string ButtonSignOutXpathLocator = "//a[@href=\"/logout\"]";              
-
-        //public FirstVideoPage(IWebDriver driver) : base(driver)
-        //{
-        //}
+        private By ButtonAvatar = By.CssSelector("button#avatar-btn");
+        private By ButtonSignOut = By.XPath("//a[@href=\"/logout\"]");        
 
         public IWebElement AvatarButton
         {
-            get { return Driver.GetDriver().FindElement(By.CssSelector(ButtonAvatarCssLocator));  }
+            get { return driver.FindElement(ButtonAvatar);  }
         }
         public IWebElement SignOutButton
         {
-            get { return Driver.GetDriver().FindElement(By.XPath(ButtonSignOutXpathLocator)); }
+            get { return driver.FindElement(ButtonSignOut); }
         }
 
         public void ClickAvatarButton()
@@ -28,6 +25,7 @@ namespace YoutubeSignInAndVideoPlayback.pages.PageObjectPattern
 
         public void ClickSignOutButton()
         {
+            wait.Until(ExpectedConditions.ElementIsVisible(ButtonSignOut));
             SignOutButton.Click();
         }
     }

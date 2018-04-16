@@ -11,10 +11,10 @@ namespace YoutubeSignInAndVideoPlayback.tests
         private const string SEARCH_STRING       = "gnossienne 1 piano";
         private const string EXPECTED_PAGE_TITLE = "ERIK SATIE Gnossienne 1 - Alessio Nanni, piano - YouTube";
 
-        StartPageSteps       startPageSteps      = new StartPageSteps();
-        SignInPageSteps      signInPageSteps     = new SignInPageSteps();
-        HomePageSteps        homePageSteps       = new HomePageSteps();
-        FirstVideoPageSteps  firstVideoPageSteps = new FirstVideoPageSteps();
+        private StartPageSteps      startPageSteps      = new StartPageSteps();
+        private SignInPageSteps     signInPageSteps     = new SignInPageSteps();
+        private HomePageSteps       homePageSteps       = new HomePageSteps();
+        private FirstVideoPageSteps firstVideoPageSteps = new FirstVideoPageSteps();
 
         [Test]
         public void YoutubeSignInAndVideoPlaybackTest_PageObject()
@@ -24,7 +24,7 @@ namespace YoutubeSignInAndVideoPlayback.tests
             signInPageSteps.SignInToYouTube(USERNAME, PASSWORD);
             homePageSteps.SelectFirstVideoInTheGrid(SEARCH_STRING);
             
-            string actualPageTitle = firstVideoPageSteps.GetPageTitle(EXPECTED_PAGE_TITLE);
+            var actualPageTitle = firstVideoPageSteps.GetPageTitle(EXPECTED_PAGE_TITLE);
 
             Assert.AreEqual(EXPECTED_PAGE_TITLE, actualPageTitle);
             firstVideoPageSteps.SignOutFromYouTube();         

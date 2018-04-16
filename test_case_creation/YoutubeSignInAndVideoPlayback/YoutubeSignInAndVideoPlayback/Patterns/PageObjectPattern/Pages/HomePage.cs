@@ -7,33 +7,29 @@ namespace YoutubeSignInAndVideoPlayback.pages.PageObjectPattern
 {
     class HomePage : BasePage
     {
-        private string SearchFieldCssLocator = "#search";
-        private string RequiredVideoXpathLocator = ".//ytd-video-renderer[1]";
-       
-        //public HomePage(IWebDriver driver) : base(driver)
-        //{
-        //}       
+        private By FieldSearch = By.CssSelector("#search");
+        private By VideoRequired = By.XPath(".//ytd-video-renderer[1]");
 
         public IWebElement SearchField
         {
-            get { return Driver.GetDriver().FindElement(By.CssSelector(SearchFieldCssLocator));  }
+            get { return driver.FindElement(FieldSearch);  }
         }
 
         public IWebElement FirstVideoInGrid
         {
-            get { return Driver.GetDriver().FindElement(By.XPath(RequiredVideoXpathLocator)); }
+            get { return driver.FindElement(VideoRequired); }
         }
 
         public void SearchForRequiredVideo(string search_string)
         {           
-            wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(SearchFieldCssLocator)));
+            wait.Until(ExpectedConditions.ElementIsVisible(FieldSearch));
             SearchField.SendKeys(search_string);
             SearchField.SendKeys(Keys.Enter);
         }
 
         public void ClickFirstVideoInGrid()
         {            
-            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(RequiredVideoXpathLocator)));
+            wait.Until(ExpectedConditions.ElementIsVisible(VideoRequired));
             FirstVideoInGrid.Click();
         }
     }

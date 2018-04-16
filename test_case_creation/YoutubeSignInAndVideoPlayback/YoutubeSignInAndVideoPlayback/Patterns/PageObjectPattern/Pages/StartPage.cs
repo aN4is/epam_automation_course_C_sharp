@@ -5,23 +5,18 @@ namespace YoutubeSignInAndVideoPlayback.pages.PageObjectPattern
 {
     class StartPage : BasePage
     {
-        private string ButtonSignInXpathLocator = "//*[@id='text']";
-        private string BaseUrl = "https://youtube.com";
-        private By ButtonSignInXpathLocator1 = By.XPath("//*[@id='text']");
-        
-        
-        //public StartPage(IWebDriver driver) : base(driver)
-        //{            
-        //}
+        private const string BaseUrl = "https://youtube.com";
+        private By ButtonSignIn = By.XPath("//*[@id='text']");        
+
 
         public IWebElement SignInButton
         {
-            get { return Driver.GetDriver().FindElement(By.XPath(ButtonSignInXpathLocator));  }
+            get { return driver.FindElement(ButtonSignIn);  }
         }
 
         public void OpenUrl()
         {
-            Driver.GetDriver().Navigate().GoToUrl(BaseUrl);
+            driver.Navigate().GoToUrl(BaseUrl);
         }
 
         public void ClickSignInButton()

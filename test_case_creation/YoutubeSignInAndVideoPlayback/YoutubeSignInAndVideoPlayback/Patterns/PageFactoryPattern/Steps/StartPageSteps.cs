@@ -1,8 +1,10 @@
-﻿namespace YoutubeSignInAndVideoPlayback.pages.PageObjectPattern.steps
+﻿using YoutubeSignInAndVideoPlayback.Patterns.PageFactoryPattern.Pages;
+
+namespace YoutubeSignInAndVideoPlayback.pages.PageFactoryPattern.steps
 {
     class StartPageSteps : BasePageSteps
     {
-        private StartPage startPage = new StartPage();
+        private StartPage startPage = new StartPage(driver);
 
         public void OpenSignInPage()
         {            

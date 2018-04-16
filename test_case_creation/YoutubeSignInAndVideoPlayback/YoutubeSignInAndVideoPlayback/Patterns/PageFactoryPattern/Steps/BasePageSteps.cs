@@ -3,12 +3,12 @@ using OpenQA.Selenium.Support.UI;
 using System;
 using YoutubeSignInAndVideoPlayback.WebDriver;
 
-namespace YoutubeSignInAndVideoPlayback.pages.PageObjectPattern.steps
+namespace YoutubeSignInAndVideoPlayback.pages.PageFactoryPattern.steps
 {
     public abstract class BasePageSteps
     {
         private const int TimeoutSec = 5;      
-        protected IWebDriver driver = Driver.GetDriver();
+        public static IWebDriver driver = Driver.GetDriver();
 
         WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(TimeoutSec));
 

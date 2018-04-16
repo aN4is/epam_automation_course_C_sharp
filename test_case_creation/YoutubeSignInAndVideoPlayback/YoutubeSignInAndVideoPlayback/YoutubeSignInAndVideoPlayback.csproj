@@ -59,10 +59,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Patterns\PageFactoryPattern\FirstVideoPage.cs" />
-    <Compile Include="Patterns\PageFactoryPattern\HomePage.cs" />
-    <Compile Include="Patterns\PageFactoryPattern\SignInPage.cs" />
-    <Compile Include="Patterns\PageFactoryPattern\StartPage.cs" />
+    <Compile Include="Patterns\PageFactoryPattern\Pages\BasePage.cs" />
+    <Compile Include="Patterns\PageFactoryPattern\Pages\FirstVideoPage.cs" />
+    <Compile Include="Patterns\PageFactoryPattern\Pages\HomePage.cs" />
+    <Compile Include="Patterns\PageFactoryPattern\Pages\SignInPage.cs" />
+    <Compile Include="Patterns\PageFactoryPattern\Pages\StartPage.cs" />
+    <Compile Include="Patterns\PageFactoryPattern\Steps\BasePageSteps.cs" />
+    <Compile Include="Patterns\PageFactoryPattern\Steps\FirstVideoPageSteps.cs" />
+    <Compile Include="Patterns\PageFactoryPattern\Steps\HomePageSteps.cs" />
+    <Compile Include="Patterns\PageFactoryPattern\Steps\SignInPageSteps.cs" />
+    <Compile Include="Patterns\PageFactoryPattern\Steps\StartPageSteps.cs" />
     <Compile Include="Patterns\PageObjectPattern\Pages\BasePage.cs" />
     <Compile Include="Patterns\PageObjectPattern\Pages\HomePage.cs" />
     <Compile Include="Patterns\PageObjectPattern\Pages\FirstVideoPage.cs" />

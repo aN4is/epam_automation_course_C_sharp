@@ -1,8 +1,10 @@
-﻿namespace YoutubeSignInAndVideoPlayback.pages.PageObjectPattern.steps
+﻿using YoutubeSignInAndVideoPlayback.Patterns.PageFactoryPattern.Pages;
+
+namespace YoutubeSignInAndVideoPlayback.pages.PageFactoryPattern.steps
 {
     class HomePageSteps : BasePageSteps
     {
-        private HomePage homePage = new HomePage();
+        private HomePage homePage = new HomePage(driver);
 
         public void SelectFirstVideoInTheGrid(string search_string)
         {

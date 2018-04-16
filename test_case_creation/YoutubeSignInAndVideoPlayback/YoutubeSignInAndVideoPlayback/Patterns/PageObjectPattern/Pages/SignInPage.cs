@@ -7,54 +7,50 @@ namespace YoutubeSignInAndVideoPlayback.pages.PageObjectPattern
 {
     class SignInPage : BasePage
     {
-        private string EmailInputCssLocator = "div > input[type='email']";
-        private string ButtonNextCssLocator = "div#identifierNext > content > span";
-        private string PasswordInputCssLocator = "div > input[type='password']";
-        private string ButtonDoneCssLocator = "div#passwordNext > content > span";
-
-        //public SignInPage(IWebDriver driver) : base(driver)
-        //{            
-        //}
+        private By EmailInputField = By.CssSelector("div > input[type='email']");
+        private By ButtonNext = By.CssSelector("div#identifierNext > content > span");
+        private By PasswordInputField = By.CssSelector("div > input[type='password']");
+        private By ButtonDone = By.CssSelector("div#passwordNext > content > span");      
 
         public IWebElement EmailInput
         {
-            get { return Driver.GetDriver().FindElement(By.CssSelector(EmailInputCssLocator));  } 
+            get { return driver.FindElement(EmailInputField);  } 
         }
 
         public IWebElement PasswordInput
         {
-            get { return Driver.GetDriver().FindElement(By.CssSelector(PasswordInputCssLocator)); }
+            get { return driver.FindElement(PasswordInputField); }
         }
 
         public IWebElement NextButton
         {
-            get { return Driver.GetDriver().FindElement(By.CssSelector(ButtonNextCssLocator)); }
+            get { return driver.FindElement(ButtonNext); }
         }
 
         public IWebElement DoneButton
         {
-            get { return Driver.GetDriver().FindElement(By.CssSelector(ButtonDoneCssLocator)); }
+            get { return driver.FindElement(ButtonDone); }
         }
 
         public void EnterUsername(string username)
         {            
-            wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(EmailInputCssLocator)));
+            wait.Until(ExpectedConditions.ElementIsVisible(EmailInputField));
             EmailInput.SendKeys(username);
         }
         public void ClickNextButton()
         {            
-            wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(ButtonNextCssLocator)));
+            wait.Until(ExpectedConditions.ElementIsVisible(ButtonNext));
             NextButton.Click();
         }
 
         public void EnterPassword(string password)
         {            
-            wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(PasswordInputCssLocator)));
+            wait.Until(ExpectedConditions.ElementIsVisible(PasswordInputField));
             PasswordInput.SendKeys(password);
         }
         public void ClickDoneButton()
         {            
-            wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(ButtonDoneCssLocator)));
+            wait.Until(ExpectedConditions.ElementIsVisible(ButtonDone));
             DoneButton.Click();
         }
     }
