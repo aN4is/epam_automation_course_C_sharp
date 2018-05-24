@@ -8,9 +8,9 @@ namespace YoutubeSignInAndVideoPlayback.Patterns.PageFactoryPattern.Pages
 {
     public abstract class BasePage
     {
-        public IWebDriver driver = Driver.GetDriver();
+        protected IWebDriver driver = Driver.GetDriver();
         private const int TimeoutSec = 5;
-        public WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(TimeoutSec));
+        protected WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(TimeoutSec));
 
         public BasePage(IWebDriver driver)
         {

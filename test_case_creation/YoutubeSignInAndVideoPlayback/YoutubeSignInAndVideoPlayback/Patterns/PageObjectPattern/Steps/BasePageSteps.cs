@@ -3,7 +3,7 @@ using OpenQA.Selenium.Support.UI;
 using System;
 using YoutubeSignInAndVideoPlayback.WebDriver;
 
-namespace YoutubeSignInAndVideoPlayback.pages.PageObjectPattern.steps
+namespace YoutubeSignInAndVideoPlayback.Patterns.PageObjectPattern.Steps
 {
     public abstract class BasePageSteps
     {

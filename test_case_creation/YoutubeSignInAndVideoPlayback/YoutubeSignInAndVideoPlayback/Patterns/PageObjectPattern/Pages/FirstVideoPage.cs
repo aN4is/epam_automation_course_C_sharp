@@ -2,12 +2,12 @@
 using OpenQA.Selenium.Support.UI;
 using YoutubeSignInAndVideoPlayback.WebDriver;
 
-namespace YoutubeSignInAndVideoPlayback.pages.PageObjectPattern
+namespace YoutubeSignInAndVideoPlayback.Patterns.PageObjectPattern.Pages
 {
     class FirstVideoPage : BasePage
     {
         private By ButtonAvatar = By.CssSelector("button#avatar-btn");
-        private By ButtonSignOut = By.XPath("//a[@href=\"/logout\"]");        
+        private By ButtonSignOut = By.XPath("//a[@href='/logout']");        
 
         public IWebElement AvatarButton
         {

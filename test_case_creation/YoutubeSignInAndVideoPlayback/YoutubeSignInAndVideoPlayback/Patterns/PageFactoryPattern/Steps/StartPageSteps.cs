@@ -1,6 +1,6 @@
 ﻿using YoutubeSignInAndVideoPlayback.Patterns.PageFactoryPattern.Pages;
 
-namespace YoutubeSignInAndVideoPlayback.pages.PageFactoryPattern.steps
+namespace YoutubeSignInAndVideoPlayback.Patterns.PageFactoryPattern.Steps
 {
     class StartPageSteps : BasePageSteps
     {

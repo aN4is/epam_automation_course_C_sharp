@@ -2,7 +2,7 @@
 using System;
 using YoutubeSignInAndVideoPlayback.WebDriver;
 
-namespace YoutubeSignInAndVideoPlayback.tests
+namespace YoutubeSignInAndVideoPlayback.Tests
 {
     public abstract class BaseTest
     {
@@ -21,4 +21,6 @@ namespace YoutubeSignInAndVideoPlayback.tests
             Driver.Quit();            
         }
     }
+    //before test - navigate
+    //after - log out (if logged in)
 }

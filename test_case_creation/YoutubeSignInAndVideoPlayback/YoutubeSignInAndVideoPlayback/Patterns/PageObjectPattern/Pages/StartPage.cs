@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using YoutubeSignInAndVideoPlayback.WebDriver;
 
-namespace YoutubeSignInAndVideoPlayback.pages.PageObjectPattern
+namespace YoutubeSignInAndVideoPlayback.Patterns.PageObjectPattern.Pages
 {
     class StartPage : BasePage
     {

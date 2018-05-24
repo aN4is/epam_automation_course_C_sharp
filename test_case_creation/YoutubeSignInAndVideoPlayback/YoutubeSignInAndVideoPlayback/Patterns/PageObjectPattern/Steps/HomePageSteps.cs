@@ -1,4 +1,6 @@
-﻿namespace YoutubeSignInAndVideoPlayback.pages.PageObjectPattern.steps
+﻿using YoutubeSignInAndVideoPlayback.Patterns.PageObjectPattern.Pages;
+
+namespace YoutubeSignInAndVideoPlayback.Patterns.PageObjectPattern.Steps
 {
     class HomePageSteps : BasePageSteps
     {

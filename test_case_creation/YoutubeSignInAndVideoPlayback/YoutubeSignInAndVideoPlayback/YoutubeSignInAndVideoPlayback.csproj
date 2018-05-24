@@ -59,6 +59,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Strings\Strings.cs" />
+    <Compile Include="Data\Users\Users.cs" />
     <Compile Include="Patterns\PageFactoryPattern\Pages\BasePage.cs" />
     <Compile Include="Patterns\PageFactoryPattern\Pages\FirstVideoPage.cs" />
     <Compile Include="Patterns\PageFactoryPattern\Pages\HomePage.cs" />
